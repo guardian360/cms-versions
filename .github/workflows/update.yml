@@ -1,0 +1,35 @@
+---
+
+name: Update CMS versions
+
+on:
+ schedule:
+   - cron:  "0 23 * * *" # run every day at 23:00
+
+jobs:
+  update-cms-versions:
+    runs-on: ubuntu-latest
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.head_ref }}
+
+    - name: Update CMS versions
+      run: ./cms_versions.sh
+      shell: bash
+
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_author: GitHub Actions <actions@github.com>
+        commit_message: Auto-update CMS versions
+        file_pattern: cms_versions.json
+        branch: main

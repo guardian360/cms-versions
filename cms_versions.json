@@ -1,0 +1,9 @@
+{
+  "versions": {
+    "drupal_7": "7.95",
+    "drupal_8": "9.5.7",
+    "wordpress": "6.2",
+    "joomla": "4.2.9",
+    "magento": "2.4.6"
+  }
+}
