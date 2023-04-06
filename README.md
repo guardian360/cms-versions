@@ -12,4 +12,4 @@ All CMS versions will be checked against the versions in `cms_versions.json`
 and updated accordingly. The result is a `cms_versions.json` file that can be
 [downloaded directly][1].
 
-[1]: https://raw.githubusercontent.com/guardian360/cms-versions/main/cms_versions.sh
+[1]: https://raw.githubusercontent.com/guardian360/cms-versions/main/cms_versions.json
