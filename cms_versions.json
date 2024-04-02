@@ -2,7 +2,7 @@
   "versions": {
     "drupal_7": "7.99",
     "drupal_8": "9.5.9",
-    "wordpress": "6.4.3",
+    "wordpress": "6.5",
     "joomla": "5.0.3",
     "magento": "2.4.7"
   }
